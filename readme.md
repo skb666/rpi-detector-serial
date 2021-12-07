@@ -24,6 +24,21 @@ sudo python -m pip install -U pyzbar pyserial opencv-python
 #ImportError: libcblas.so.3: cannot open shared object file
 sudo apt install libatlas-base-dev
 ```
+（注：非必须）使pyzbar支持中文
+
+```bash
+#安装编译工具
+sudo apt install build-essential
+#进入zbar源码目录（这里的源码修改过）
+cd zbar-0.10
+#配置编译选项
+./configure --enable-shared --enable-static --without-imagemagick --without-jpeg --without-python --without-gtk --without-qt --disable-video
+#编译安装
+make && sudo make install
+```
+
+
+
 
 ## 3、树莓派配置
 
