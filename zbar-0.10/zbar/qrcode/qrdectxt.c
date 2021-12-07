@@ -61,6 +61,7 @@ int qr_code_data_list_extract_text(const qr_code_data_list *_qrlist,
   /*This is the encoding the standard says is the default.*/
   latin1_cd=iconv_open("UTF-8","ISO8859-1");
   /*But this one is often used, as well.*/
+  //这里的SJIS修改为了GB2312
   sjis_cd=iconv_open("UTF-8","GB2312");
   /*This is a trivial conversion just to check validity without extra code.*/
   utf8_cd=iconv_open("UTF-8","UTF-8");
