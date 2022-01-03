@@ -109,7 +109,7 @@ python main.py DEBUG DISPLAY
 ```
 ## 7、其他
 
-觉得麻烦可以直接下载配置好的镜像
+配置好的系统镜像（不含代码）
 
     #最后更新时间 2021-12-08  
     链接：https://pan.baidu.com/s/1SCKBFkmkMoiznnE9xID1rg  
