@@ -134,9 +134,10 @@ int qr_code_data_list_extract_text(const qr_code_data_list *_qrlist,
     sa_text=(char *)malloc((sa_ctext+1)*sizeof(*sa_text));
     sa_ntext=0;
     eci=-1;
-    enc_list[0]=sjis_cd;
-    enc_list[1]=latin1_cd;
-    enc_list[2]=utf8_cd;
+    //这里调整了解码优先级
+    enc_list[0]=utf8_cd;
+    enc_list[1]=sjis_cd;
+    enc_list[2]=latin1_cd;
     eci_cd=(iconv_t)-1;
     err=0;
     zbar_symbol_t *syms = NULL, **sym = &syms;
